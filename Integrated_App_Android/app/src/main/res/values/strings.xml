@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">IntegratedApp</string>
+    <string name="app_title">Integrated App \n Hearing Aid Signal Processing Modules</string>
+    <string name="action_settings">Settings</string>
+    <string name="startButton">Start</string>
+    <string name="stopButton">Stop</string>
+    <string name="readButton">Read File</string>
+    <string name="samplingFrequencyTextView">Sampling Frequency</string>
+    <string name="samplingFrequencyEditText">48000</string>
+    <string name="processingTime">Frame Processing Time:</string>
+    <string name="frameRate">Frame Rate (in ms)</string>
+    <string name="frameSize">10.00</string>
+    <string name="smoothingBufferSize">1.0</string>
+    <string name="decisionRate">Decision Rate (in seconds)</string>
+    <string name="quietAdjustment">Quiet Adjustment</string>
+    <string name="playAudio">Play Audio</string>
+    <string name="storeFeatures">Store Features</string>
+    <string name="vadoutput">\t VAD OUTPUT</string>
+    <string name="audiooutput">\t AUDIO OUTPUT</string>
+    <string name="noise">Noise</string>
+    <string name="speech">Speech+Noise</string>
+    <string name="quiet">Quiet</string>
+    <string name="dbpower">SPL:</string>
+    <string name="copyright">© SIP Lab, UT Dallas</string>
+    <string name="usersettings">\t USER SETTINGS AND ACTIONS</string>
+    <string name="title_activity_compression_settings">Compression Settings</string>
+    <string name="title_activity_noise_reduction_audio_settings">Noise Reduction Settings</string>
+
+</resources>

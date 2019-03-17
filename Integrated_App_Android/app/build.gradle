@@ -1,0 +1,86 @@
+apply plugin: 'com.android.model.application'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def superpowered_sdk_path = properties.getProperty('superpowered.dir')
+
+model {
+    repositories {
+        libs(PrebuiltLibraries) {
+            superpowered { // this is where you declare the "superpowered" static library
+                headers.srcDir "${superpowered_sdk_path}"
+                binaries.withType(StaticLibraryBinary) { // attaching library files to each platform
+                    def platformName = targetPlatform.getName()
+                    if (platformName == "armeabi-v7a") {
+                        staticLibraryFile = file("${superpowered_sdk_path}/libSuperpoweredAndroidarmeabi-v7a.a")
+                    } else if (platformName == "arm64-v8a") {
+                        staticLibraryFile = file("${superpowered_sdk_path}/libSuperpoweredAndroidarm64-v8a.a")
+                    } else if (platformName == "x86") {
+                        staticLibraryFile = file("${superpowered_sdk_path}/libSuperpoweredAndroidX86.a")
+                    }
+                }
+            }
+        }
+    }
+
+    android { // main settings for your application
+        compileSdkVersion = 23
+        buildToolsVersion = "23.0.3"
+
+        defaultConfig {
+            applicationId "com.superpowered.IntegratedApp"
+            applicationIdSuffix ".release"
+            minSdkVersion.apiLevel = 16 // more than 95% of all active Android devices
+            targetSdkVersion.apiLevel = 22
+            versionCode 1
+            versionName "1.0"
+        }
+    }
+
+    android.ndk { // your application's native layer parameters
+        moduleName = "FrequencyDomain"
+        platformVersion = 16
+        stl = "c++_static"
+
+        // use -Ofast or -O3 for full optimization, char data type is signed
+        // -O2 is recommended;
+        //  -DNDEBUG": no debug symbols
+        // -pipe: makes  compilation process faster
+        // -s: Remove all symbol table and relocation information from the executable.
+        // refs: https://wiki.gentoo.org/wiki/GCC_optimization
+        //       https://gcc.gnu.org/onlinedocs/gcc-4.8.0/gcc/Link-Options.html#Link-Options
+        CFlags.addAll(["-O2", "-s", "-fsigned-char", "-pipe"])
+        cppFlags.addAll(["-fsigned-char", "-I${superpowered_sdk_path}".toString()])
+        ldLibs.addAll(["log", "android", "OpenSLES"])
+        // load these libraries: log, android, OpenSL ES (for audio)
+        abiFilters.addAll(["armeabi-v7a", "x86"])
+        // these platforms cover 99% percent of all Android devices
+    }
+
+    android.sources.main.jni {
+        source {
+            srcDir "src/main/jni"
+            srcDir "${superpowered_sdk_path}/AndroidIO"
+        }
+        exportedHeaders {
+            srcDir "src/main/jni/"
+            srcDir "src/main/jni/CommonHeaders"
+            srcDir "src/main/jni/DynamicRangeMultibandCompression"
+            srcDir "src/main/jni/NoiseReductionCode"
+            srcDir "src/main/jni/VAD"
+            srcDir "src/main/jni/VAD/FeatureExtraction"
+            srcDir "src/main/jni/VAD/RandomForest1VAD"
+        }
+        dependencies {
+            library "superpowered" linkage "static"
+            // this is where you attach the "superpowered" static library to your app
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.tensorflow:tensorflow-android:1.5.0'
+}

@@ -1,0 +1,53 @@
+TASK com.superpowered.VADAndroid id=404
+  ACTIVITY com.superpowered.VADAndroid/.MainActivity ce3a17b pid=6530
+    Local FragmentActivity 83c54b3 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@fa08d54
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@fa08d54
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{e92ca3a V.E..... ... 0,0-1440,2560}
+        android.widget.LinearLayout{563f4fd V.E..... ... 0,0-1440,2560}
+          android.view.ViewStub{8e295f2 G.E..... ... 0,0-0,0 #1020469 android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{d55c443 V.E..... ... 0,96-1440,2560}
+            android.support.v7.widget.ActionBarOverlayLayout{e232ac0 V.E..... ... 0,0-1440,2464 #7f0c003f app:id/decor_content_parent}
+              android.support.v7.widget.ContentFrameLayout{c7fe3f9 V.E..... ... 0,224-1440,2464 #1020002 android:id/content}
+                android.widget.RelativeLayout{5801f3e VFE..... F.. 0,0-1440,2240}
+                  android.widget.LinearLayout{906619f V.E..... ... 84,84-1356,1078 #7f0c0050 app:id/settingsLayout}
+                    android.widget.LinearLayout{97032ec V.E..... ... 20,20-1252,162}
+                      android.support.v7.widget.AppCompatTextView{2d1c6b5 V.ED.... ... 0,0-616,142 #7f0c0051 app:id/samplingRateText}
+                      android.support.v7.widget.AppCompatSeekBar{2daf14a VFED.... ... 616,0-1232,72 #7f0c0052 app:id/samplingRateSeekbar}
+                    android.widget.LinearLayout{5f978bb V.E..... ... 20,202-1252,362}
+                      android.support.v7.widget.AppCompatTextView{9a391d8 V.ED.... ... 0,40-616,116}
+                      android.support.v7.widget.AppCompatEditText{6251931 VFED..CL ... 616,0-1232,160 #7f0c0053 app:id/frameSize}
+                    android.widget.LinearLayout{85ed816 V.E..... ... 20,402-1252,562}
+                      android.support.v7.widget.AppCompatTextView{d3ce597 V.ED.... ... 0,0-616,160}
+                      android.support.v7.widget.AppCompatEditText{aabf384 VFED..CL ... 616,0-1232,160 #7f0c0054 app:id/decisionRate}
+                    android.widget.LinearLayout{b81176d V.E..... ... 20,602-1252,678}
+                      android.support.v7.widget.AppCompatTextView{6685fa2 V.ED.... ... 0,0-616,76 #7f0c0055 app:id/quietAdjustmentText}
+                      android.support.v7.widget.AppCompatSeekBar{e04433 VFED.... ... 616,0-1232,72 #7f0c0056 app:id/quietAdjustmentSeekbar}
+                    android.widget.LinearLayout{6b6c3f0 V.E..... ... 20,718-1252,826}
+                      android.support.v7.widget.AppCompatTextView{724bd69 V.ED.... ... 0,16-616,92}
+                      android.widget.Switch{490d3ee VFED..C. ... 616,0-1232,108 #7f0c0057 app:id/switchPlayAudio}
+                    android.widget.LinearLayout{a50f08f V.E..... ... 20,866-1252,974}
+                      android.support.v7.widget.AppCompatTextView{b5c2f1c V.ED.... ... 0,16-616,92}
+                      android.widget.Switch{842c725 VFED..C. ... 616,0-1232,108 #7f0c0058 app:id/switchStoreFeatures}
+                  android.widget.LinearLayout{8ba40fa V.E..... ... 84,1504-1356,1808}
+                    android.support.v7.widget.AppCompatTextView{27606ab V.ED.... ... 0,0-1272,76}
+                    android.support.v7.widget.AppCompatTextView{58b2108 V.ED.... ... 0,76-1272,152 #7f0c005a app:id/noiseLabel}
+                    android.support.v7.widget.AppCompatTextView{47db0a1 V.ED.... ... 0,152-1272,228 #7f0c005b app:id/speechLabel}
+                    android.support.v7.widget.AppCompatTextView{2db72c6 V.ED.... ... 0,228-1272,304 #7f0c005c app:id/quietLabel}
+                  android.support.v7.widget.AppCompatTextView{f8c6287 V.ED.... ... 84,1848-1356,1924 #7f0c0059 app:id/frameProcessingTime}
+                  android.widget.LinearLayout{3545b4 V.E..... ... 84,1964-1356,2156 #7f0c005d app:id/buttonLayout}
+                    android.support.v7.widget.AppCompatButton{f23b5dd VFED..C. ... 0,0-424,192 #7f0c005e app:id/buttonStart}
+                    android.support.v7.widget.AppCompatButton{98bf552 VFED..C. ... 424,0-848,192 #7f0c005f app:id/buttonRead}
+                    android.support.v7.widget.AppCompatButton{4c2a023 VF.D..C. ... 848,0-1272,192 #7f0c0060 app:id/buttonStop}
+              android.support.v7.widget.ActionBarContainer{1bb0920 V.ED.... ... 0,0-1440,224 #7f0c0040 app:id/action_bar_container}
+                android.support.v7.widget.Toolbar{82ad2d9 V.E..... ... 0,0-1440,224 #7f0c0041 app:id/action_bar}
+                  android.widget.TextView{350149e V.ED.... ... 64,58-517,165}
+                  android.support.v7.widget.ActionMenuView{f951b7f V.E..... ... 1280,0-1440,224}
+                    android.support.v7.widget.ActionMenuPresenter$OverflowMenuButton{417974c VFED..C. ... 0,16-160,208}
+                android.support.v7.widget.ActionBarContextView{eecc395 G.E..... ... 0,0-0,0 #7f0c0042 app:id/action_context_bar}
+        android.view.View{8a4dcaa V.ED.... ... 0,0-1440,96 #102002f android:id/statusBarBackground}

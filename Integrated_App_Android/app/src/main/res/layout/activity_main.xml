@@ -1,0 +1,288 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tittleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/custom_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1.0"
+            android:layout_margin="5dp"
+            android:background="@android:color/white">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/app_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_weight="1.73" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tittleLayout"
+        android:layout_alignStart="@+id/tittleLayout"
+        android:layout_below="@+id/tittleLayout"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/custom_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:text="@string/vadoutput"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:weightSum="1.0">
+
+            <TextView
+                android:id="@+id/noiseLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:layout_marginBottom="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/noise" />
+
+            <TextView
+                android:id="@+id/speechLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:layout_marginBottom="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/speech" />
+
+            <TextView
+                android:id="@+id/quietLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/quiet" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/vadLayout"
+        android:layout_alignLeft="@+id/vadLayout"
+        android:layout_alignStart="@+id/vadLayout"
+        android:background="@color/custom_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/audioLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/audiooutput"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/noiseReductionSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:layout_weight="1"
+                android:onClick="noiseReductionSelect"
+                android:text="  Noise Reduction" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/compressionSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:layout_weight="1"
+                android:onClick="compressionSelect"
+                android:text="  Compression" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/amplification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="  Amplification: 1.00x" />
+
+            <SeekBar
+                android:id="@+id/amplificationBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:max="1000"
+                android:progress="500" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/audioLayout"
+        android:layout_alignLeft="@+id/audioLayout"
+        android:layout_alignStart="@+id/audioLayout"
+        android:background="@color/custom_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/userSettingLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/usersettings"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="left"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/noiseReductionSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_view_height"
+                    android:gravity="center_vertical"
+                    android:onClick="onSettingsClick"
+                    android:text="\tNoise Reduction Settings"
+                    android:drawableRight="@drawable/ic_go_search_api_holo_light"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#FFFFFF"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/compressionSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_view_height"
+                    android:gravity="center_vertical"
+                    android:onClick="onSettingsClick"
+                    android:text="\tCompression Settings"
+                    android:drawableRight="@drawable/ic_go_search_api_holo_light"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#FFFFFF"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <Switch
+                    android:id="@+id/saveIOSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_view_height"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="  Save Audio I/O" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/startStopButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userSettingLayout"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@android:color/white"
+                android:textOff="Start Audio"
+                android:textOn="Stop Audio"
+                android:onClick="onStartStopClick"
+                android:textColor="@drawable/toggle_text"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,1156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".CompressionSettings"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:layout_weight="1">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:shrinkColumns="1"
+        android:isScrollContainer="true"
+        android:background="@color/custom_background">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BAND 1:\n0 TO 500 HZ"
+                android:textColor="@android:color/darker_gray"
+
+                android:layout_margin="10dp"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Compression Ratio" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="1"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b1CrSlider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="4"
+                android:max="49" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="50"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b1CrLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="5\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_view_height"
+            android:gravity="center_vertical|left"
+            android:background="@android:color/background_light"
+            android:layout_weight="0"
+            android:text=" Threshold (dB)" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_view_height"
+            android:gravity="center_vertical"
+            android:background="@android:color/background_light"
+            android:text="-50"
+            android:textColor="@android:color/darker_gray" />
+
+        <SeekBar
+            android:id="@+id/b1ThSlider"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/custom_view_height"
+            android:gravity="center_vertical"
+            android:background="@android:color/background_light"
+            android:layout_weight="80"
+            android:progress="45"
+            android:max="50" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/custom_view_height"
+            android:gravity="center"
+            android:background="@android:color/background_light"
+            android:text="0"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/b1ThLabel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_view_height"
+            android:background="@android:color/background_light"
+            android:layout_weight="20"
+            android:gravity="center_vertical|right"
+            android:text="-5\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Attack Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b1AtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="5"
+                android:max="200" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="200"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b1AtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="5\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Release Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b1RtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="100"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="500"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b1RtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="100\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BAND 2:\n500 TO 1000 HZ"
+                android:textColor="@android:color/darker_gray"
+                android:layout_margin="10dp"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Compression Ratio" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="1"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b2CrSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="4"
+                android:max="49" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="50"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b2CrLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="5\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Threshold (dB)" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:text="-50"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b2ThSlider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="40"
+                android:max="50" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b2ThLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="-10\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Attack Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b2AtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="5"
+                android:max="200" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="200"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b2AtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="5\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Release Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b2RtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="100"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="500"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b2RtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="100\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BAND 3:\n1000 TO 2000 HZ"
+                android:textColor="@android:color/darker_gray"
+                android:layout_margin="10dp"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Compression Ratio" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="1"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b3CrSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="4"
+                android:max="49" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="50"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b3CrLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="5\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Threshold (dB)" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:text="-50"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b3ThSlider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="30"
+                android:max="50" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b3ThLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="-20\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Attack Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b3AtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="2"
+                android:max="200" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="200"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b3AtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="2\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Release Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b3RtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="50"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="500"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b3RtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="50\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BAND 4:\n2000 TO 4000 HZ"
+                android:textColor="@android:color/darker_gray"
+                android:layout_margin="10dp"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Compression Ratio" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="1"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b4CrSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="3"
+                android:max="49" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="50"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b4CrLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="4\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Threshold (dB)" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:text="-50"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b4ThSlider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="25"
+                android:max="50" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b4ThLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="-25\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Attack Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b4AtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="2"
+                android:max="200" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="200"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b4AtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="2\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Release Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b4RtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="50"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="500"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b4RtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="50\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BAND 5:\nABOVE 4000 HZ"
+                android:textColor="@android:color/darker_gray"
+                android:layout_margin="10dp"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Compression Ratio" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="1"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b5CrSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="3"
+                android:max="49" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="50"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b5CrLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="4\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Threshold (dB)" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:text="-50"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b5ThSlider"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="15"
+                android:max="50" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b5ThLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="-35\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Attack Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b5AtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="2"
+                android:max="200" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="200"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b5AtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="2\t\t" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical|left"
+                android:background="@android:color/background_light"
+                android:layout_weight="0"
+                android:text=" Release Time (ms)" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="0"
+                android:textColor="@android:color/darker_gray" />
+
+            <SeekBar
+                android:id="@+id/b5RtSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center_vertical"
+                android:background="@android:color/background_light"
+                android:layout_weight="80"
+                android:progress="100"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/custom_view_height"
+                android:gravity="center"
+                android:background="@android:color/background_light"
+                android:text="500"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/b5RtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_view_height"
+                android:background="@android:color/background_light"
+                android:layout_weight="20"
+                android:gravity="center_vertical|right"
+                android:text="100\t\t" />
+        </TableRow>
+
+    </TableLayout>
+    </ScrollView>
+</RelativeLayout>
