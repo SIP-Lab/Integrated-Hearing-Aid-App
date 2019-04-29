@@ -20,3 +20,10 @@ All material related to our paper is available via the following links:
 ## Getting Started
 
 A [User's Guide](Users-Guide-IntegratedApp.pdf) is provided with this project which provides all the description required for training the model and running it on Android and iOS Smartphones.
+
+## License and Citation
+The codes are licensed under MIT license.
+
+For any utilization of the code content of this repository, the following paper needs to be cited by the user:
+
+- T. A. Chowdhury, A. Sehgal and N. Kehtarnavaz, "Integrating Signal Processing Modules of Hearing Aids into a Real-Time Smartphone App," Proceedings of IEEE Engineering in Medicine and Biology Society (EMBC), pp. 2837-2840, 2018.
